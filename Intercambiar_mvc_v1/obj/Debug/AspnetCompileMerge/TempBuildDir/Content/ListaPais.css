@@ -1,0 +1,94 @@
+﻿body {
+}
+
+#Corpo {
+    float:left;
+    width:100%;
+}
+
+a.linkGUIA{
+    float: left;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	color: #005F95;
+	text-align: left;
+	vertical-align: middle;
+	font-weight: bold;
+    margin-top: 20px;
+}
+
+p.AN_Titulo {
+    float: left;
+    margin-top: 50px;
+	margin-left: -75px;
+	display: inline;
+	height: 27px;
+	margin-bottom: 0;
+	width: 12px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 25px;
+	color: #EC1B24;
+	text-align: left;
+}
+
+#Lista {
+    width:100%;
+    margin-top: 90px;
+}
+
+#Lista div {
+    margin-top: 10px;
+}
+
+#Lista img {
+	display: inline;
+	float: left;
+	height: 41px;
+	margin-bottom: 0;
+	width: 79px;
+}
+
+#Lista img:hover {
+    cursor: pointer;
+    font-size: 30px;
+}
+
+#Lista h1 {
+    font-family: Arial, Helvetica, sans-serif;
+	font-size: 19px;
+	font-style: normal;
+	color: #006095;
+	text-align: center;
+	font-weight: bold;
+	vertical-align: middle;
+}
+
+#Lista ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+#Lista li {
+  font: 200 20px/1.5 Helvetica, Verdana, sans-serif;
+  border-bottom: 1px solid #ccc;
+}
+ 
+#Lista li:last-child {
+  border: none;
+}
+ 
+#Lista li a {
+  text-decoration: none;
+  color: #000;
+  display: block;
+  width: 100%;
+}
+ 
+#Lista li:hover, #Lista h1:hover {
+  cursor: pointer;
+  font-size: 30px;
+}
+
+
+

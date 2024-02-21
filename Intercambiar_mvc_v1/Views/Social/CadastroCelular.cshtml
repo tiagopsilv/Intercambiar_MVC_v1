@@ -1,0 +1,79 @@
+﻿@section head{
+    <link href="~/Content/CadastroCelular.css" rel="stylesheet" />
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+
+    <script src="~/Scripts/_CadastroCelular.js"></script>
+
+}
+
+<main id="Texto">
+    <div style="width: 50%; float: left; margin-top: 20px">
+    </div>
+        <label style="width: 100%; float: left; margin-left: 10px;">
+            Cadastre via:
+        </label>
+        <a href="#">
+            <img src="~/Imagens/facenome.jpg" style="float: left; margin-left: 10px; margin-top: 10px;" />
+        </a>
+        <label style="width: 100%; float: left; margin-top: 10px; margin-left: 10px">
+            <a href="#">clique aqui</a>
+        </label>
+
+        <label style="width: 100%; float: left; margin-left: 10px;margin-top: 10px;">
+            ou
+        </label>
+    </div>
+    <label id="Cad_Usuario_Titulo_Celular_Celular" class="Cad_Usuario_Titulo_Celular">E-mail</label>
+    <input id="Cad_Usuario_Celular" name="Cad_Usuario_Celular" type="email" placeholder="E-mail" class="Cad_Usuario_Celular" />
+    <label id="Cad_Usuario_Titulo_Primeiro_Nome_Celular" class="Cad_Usuario_Titulo_Celular">Primeiro Nome</label>
+    <input id="cad_Primeiro_Nome_Celular" name="cad_Primeiro_Nome_Celular" type="text" placeholder="Primeiro Nome" class="Cad_Usuario_Celular" />
+    <label id="Cad_Usuario_Titulo_Sobrenome_Celular" class="Cad_Usuario_Titulo_Celular">Sobrenome</label>
+    <input id="cad_Sobrenome_Celular" name="cad_Sobrenome_Celular" type="text" placeholder="Sobrenome" class="Cad_Usuario_Celular" />
+
+
+    <label id="Cad_Usuario_Titulo_Celular" class="Cad_Usuario_Titulo_Celular">Fone</label>
+    <input id="Cad_Segundo_Fone_Celular" name="Cad_Segundo_Fone" type="text" placeholder="Fone" pattern="\([0-9]{2}\)[\s][0-9]{4}-[0-9]{4,5}" class="Cad_Usuario_Celular">
+    <label id="Cad_Usuario_Titulo_Cel_Celular" class="Cad_Usuario_Titulo_Celular">Celular</label>
+    <input id="Cad_Segundo_Celula_Celular" name="cad_Celular" type="text" placeholder="Celular" pattern="\([0-9]{2}\)[\s][0-9]{4}-[0-9]{4,5}" class="Cad_Usuario_Celular">
+    <label class="Cad_Usuario_Titulo_Celular">Escolaridade</label>
+    <select id="Cad_Segundo_Escolaridade_Celular" style="height: 40px; width: 325px;" name="Cad_Segundo_Escolaridad_Celulare" class="Cad_Usuario_Celular">
+        <option value="1">Superior completo</option>
+        <option value="2">Superior incompleto </option>
+        <option value="3">Médio Completo</option>
+        <option value="4">Médio incompleto</option>
+        <option value="5">Fundamental completo</option>
+        <option value="6">Fundamental incompleto</option>
+    </select>
+    <label class="Cad_Usuario_Titulo_Celular">Sexo</label>
+    <select id="Cad_Segundo_Sexo_Celular" style="height: 40px; width: 325px;" name="Cad_Segundo_Sexo_Celular" class="Cad_Usuario_Celular">
+        <option value="M">Masculino</option>
+        <option value="F">Feminino</option>
+    </select>
+    <label id="Cad_Usuario_Titulo_DtNasc_Celular" class="Cad_Usuario_Titulo_Celular">Data de Nascimento</label>
+    <input id="Cad_Segundo_DtNasc_Celular" name="Cad_Segundo_DtNasc_Celular" type="text" placeholder="Data de Nascimento" pattern=" \([0-9]{2}\)[\s][0-9]{4}-[0-9]{4,5}" class="Cad_Usuario_Celular">
+
+    <label id="Cad_Usuario_Titulo_Cep_Celular" class="Cad_Usuario_Titulo_Celular">CEP</label>
+    <input id="Cad_Terceiro_Cep_Celular" name="Cad_Terceiro_Cep_Celular" type="text" placeholder="CEP" pattern=" \([0-9]{2}\)[\s][0-9]{4}-[0-9]{4,5}" class="Cad_Usuario_Celular">
+    <label id="Cad_Usuario_Titulo_End_Celular" class="Cad_Usuario_Titulo_Celular">Endereço</label>
+    <input id="Cad_Terceiro_Endereco_Celular" name="Cad_Terceiro_Endereco_Celular" type="text" placeholder="Endereço" class="Cad_Usuario_Celular">
+    <label id="Cad_Usuario_Titulo_Estado_Celular" class="Cad_Usuario_Titulo_Celular">Estado</label>
+    <select id="Cad_Terceiro_Estado_Celular" style="height: 40px; width: 325px;" name="Cad_Terceiro_Estado_Celular" class="Cad_Usuario_Celular"></select>
+    <label id="Cad_Usuario_Titulo_Cidade_Celular" class="Cad_Usuario_Titulo_Celular">Cidade</label>
+    <select id="Cad_Terceiro_Cidade_Celular" style="height: 40px; width: 325px;" name="Cad_Terceiro_Cidade_Celular" class="Cad_Usuario_Celular">
+        <option value='0'>--Selecione a Cidade--</option>
+    </select>
+
+    <label id="Cad_Usuario_Titulo_Senha_Celular" class="Cad_Usuario_Titulo_Celular">Senha</label>
+    <input id="Cad_Quarto_Senha_Celular" name="Cad_Terceiro_Endereco" type="password" placeholder="Senha" class="Cad_Usuario_Celular">
+    <label id="Cad_Usuario_Titulo_Confirma_Celular" class="Cad_Usuario_Titulo_Celular">Confirmar Senha</label>
+    <input id="Cad_Quarto_Confirmar_Celular" name="Cad_Terceiro_Endereco" type="password" placeholder="Confirmar Senha" class="Cad_Usuario_Celular">
+
+    <div style="width: 100%; float: left;">
+        <button id="Cad_Salvar" class="Cad_Proximo" style="margin-left: 30%;">Salvar</button>
+        <label id="Cad_Usuario_Erros_Celular" class="Cad_Usuario_Titulo_Celular"></label>
+    </div>
+
+</main>
+

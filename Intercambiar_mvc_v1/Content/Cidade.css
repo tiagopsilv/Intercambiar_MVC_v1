@@ -1,0 +1,428 @@
+﻿a.linkGUIA{
+    float: left;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	color: #005F95;
+	text-align: left;
+	vertical-align: middle;
+	font-weight: bold;
+    margin-top: 20px;
+    width:100%;
+}
+
+#Cidade_Top_Foto {
+	margin-left: 11px;
+	margin-top: 35px;
+	display: inline;
+	float: left;
+	height: 205px;
+	margin-bottom: 0;
+	width: 306px;
+}
+
+#Cidade_Top_Titulo {
+	margin-left: 11px;
+	margin-top: 35px;
+	display: inline;
+	float: left;
+	height: 32px;
+	margin-bottom: 0;
+	width: 500px;
+	font-size: 25px;
+	color: #EC1B24;
+	text-align: left;
+}
+
+h2.detalhes {
+	margin-left: 11px;
+	margin-top: 0px;
+	display: inline;
+	float: left;
+	height: 29px;
+	margin-bottom: 0;
+	width: 496px;
+	font-family: Candara, Regular;
+	font-size: 20px;
+	color: #000;
+	text-align: left;
+	vertical-align: middle;
+	font-weight: bold;
+}
+
+#Cidade_Top_Descricao {
+	margin-left: 11px;
+	margin-top: 18px;
+	display: inline;
+	float: left;
+	height: 147px;
+	margin-bottom: 0;
+	width: 680px;
+	font-family: Candara, Regular;
+	font-size: 20px;
+	color: #000;
+	text-align: left;
+	vertical-align: middle;
+    font-weight: normal;
+}
+
+#Cidade_Comentario {
+	margin-left: 12px;
+	margin-top: 0px;
+	display: inline;
+	float: left;
+	height: 358px;
+	margin-bottom: 0;
+	width: 975px;
+    border: 2px solid #FE0000;
+    border-radius: 9px;
+    overflow: scroll;  
+	overflow-x: hidden; 
+    scrollbar-base-color:#ffeaff;
+}
+
+div.Cidade_Comentario_Mensagem_1 {
+	margin-left: 12px;
+	margin-top: 0px;
+	display: inline;
+	float: left;
+	height: 79px;
+	margin-bottom: 0;
+	width: 956px;
+}
+
+img.Cidade_Comentario_Mensagem_1_Foto {
+	margin-left: 10px;
+	margin-top: 7px;
+	display: inline;
+	float: left;
+	height: 57px;
+	margin-bottom: 0;
+	width: 60px;
+	background-color:#FE0000;
+}
+
+p.Cidade_Comentario_Mensagem_1_Texto {
+	margin-left: 90px;
+}
+
+a.Cidade_Comentario_Mensagem_1_Link {
+	color: #000;
+	text-decoration: none;
+	font-family: Candara, Regular;
+	font-size: 20px;
+	text-align: left;
+	vertical-align: middle;
+}
+
+span.Cidade_Comentario_Mensagem_1_Nome {
+	color: #FE0000;
+}
+
+strong.Cidade_Comentario_Mensagem_1_Mais {
+	color: #FE0000;
+}
+
+hr.Cidade_Comentario_Mensagem_1_Separa {
+	margin-left: 91px;
+	margin-top: 0px;
+	display: inline;
+	float: left;
+	height: 3px;
+	margin-bottom: 0;
+	width: 814px;
+	background-color:#FE0000;
+}
+
+h1.Cidade_Escola_Titulo {
+	margin-left: 12px;
+	margin-top: 20px;
+	display: inline;
+	margin-bottom: 0;
+	width: 992px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 34px;
+	color: #006BB9;
+	text-align: left;
+	font-weight: bold;
+    float:left;
+}
+
+#Cidade_Escola_borda {
+	margin-left: 12px;
+	margin-top: 3px;
+	display: inline;
+	float: left;
+	height: 197px;
+	margin-bottom: 0;
+	width: 975px;
+    border: 2px solid #FE0000;
+    border-radius: 9px;
+}
+
+img.Cidade_Escola_Direita {
+    float:left;
+    margin-top: 50px;
+    margin-left: 10px;
+}
+
+img.Cidade_Escola_Esquerda {
+    float: right;
+    margin-top: 50px;
+    margin-right: 15px;
+}
+
+#myCarousel, #myCarouse2{
+    float:left;
+}
+
+img.Cidade_Escola_1_Foto {
+    margin-left: 210px;
+    margin-top: 20px;
+    float: left;
+    height: 94px;
+    margin-bottom: 0;
+    width: 194px;
+}
+
+h1.Cidade_Escola_1_Nome {
+    float:left;
+    width: 35%;
+    margin-left: 10px;
+    color: #006BB9;
+}
+
+p.Cidade_Escola_1_Descricao{
+    float:left;
+    margin-left: 10px;
+    width: 300px;
+    height: 5%;
+    color:black;
+}
+
+img.Cidade_Agencia_1_Foto {
+    margin-left: 310px;
+    margin-top: 0px;
+    float: left;
+    height: 100%;
+    margin-bottom: 0;
+    width: 185px;
+}
+
+div.item, div.item active {
+    width:850px;
+}
+
+div.Cidade_texto_borda {
+	margin-left: 12px;
+	margin-top: 3px;
+	display: inline;
+	float: left;
+	height: 297px;
+	margin-bottom: 0;
+	width: 975px;
+    border: 2px solid #FE0000;
+    border-radius: 9px;
+}
+
+a.Cidade_Editar_link {
+    margin-left: 0px;
+	margin-top: 8px;
+	display: inline;
+	float: left;
+	height: 20px;
+	margin-bottom: 0;
+	width: 961px;
+    font-family: Candara, Regular;
+	font-size: 15px;
+	color: #006BB9;
+	text-align: right;
+}
+
+img.Hospedagem_Foto_esquerda {
+	margin-left: 7px;
+	margin-top: 30px;
+	display: inline;
+	float: left;
+	height: 162px;
+	margin-bottom: 0;
+	width: 247px; 
+}
+
+div.Hospedagem_Texto {
+	margin-left: 10px;
+	margin-top: 0px;
+	display: inline;
+	float: left;
+	height: 239px;
+	margin-bottom: 0;
+	width: 700px;
+	font-family: Candara, Regular;
+	font-size: 20px;
+	color: #000000;
+	text-align: justify;
+    overflow: scroll;  
+	overflow-x: hidden; 
+    scrollbar-base-color:#ffeaff;
+}
+
+img.Hospedagem_Foto_direita {
+	margin-left: 6px;
+    margin-right: 8px;
+	margin-top: 30px;
+	display: inline;
+	float: right;
+	height: 162px;
+	margin-bottom: 0;
+	width: 247px; 
+}
+
+div.Cidade_Comentario_Mensagem_2 {
+    display:none;
+}
+
+@media screen and (max-width: 750px) {
+    #Cidade_Top_Foto {
+        margin-left: 0px;
+        margin-top: 25px;
+        display: inline;
+        float: left;
+        height: 100%;
+        margin-bottom: 0;
+        width: 100%;
+    }
+
+    #Cidade_Top_Titulo {
+	margin-left: 0px;
+	margin-top: 10px;
+	display: inline;
+	float: left;
+	height: 100%;
+	margin-bottom: 0;
+	width: 100%;
+	font-size: 25px;
+	color: #EC1B24;
+	text-align: left;
+    }
+
+    h2.detalhes {
+	margin-left: 0px;
+	margin-top: 0px;
+	display: inline;
+	float: left;
+	height: 100%;
+	margin-bottom: 0;
+	width: 100%;
+	font-family: Candara, Regular;
+	font-size: 20px;
+	color: #000;
+	text-align: left;
+	vertical-align: middle;
+	font-weight: bold;
+    }
+
+    #Cidade_Top_Descricao {
+	margin-left: 0px;
+	margin-top: 5px;
+	display: inline;
+	float: left;
+	height: 100%;
+	margin-bottom: 0;
+	width: 100%;
+	font-family: Candara, Regular;
+	font-size: 15px;
+	color: #000;
+	text-align: left;
+	vertical-align: middle;
+    font-weight: normal;
+    }
+
+    #Cidade_Comentario {
+	margin-left: 0px;
+	margin-top: 15px;
+	display: inline;
+	float: left;
+	height: 350px;
+	margin-bottom: 0;
+	width: 100%;
+    border: 2px solid #FE0000;
+    border-radius: 9px;
+    overflow: scroll;  
+	overflow-x: hidden; 
+    scrollbar-base-color:#ffeaff;
+    }
+
+    div.Cidade_Comentario_Mensagem_1 {
+	    display:none;
+    }
+
+    div.Cidade_Comentario_Mensagem_2 {
+        display:block;
+    }
+
+    img.Cidade_Comentario_Mensagem_1_Foto {
+	margin-left: 5px;
+	margin-top: 7px;
+	display: inline;
+	float: left;
+	height: 57px;
+	margin-bottom: 0;
+	width: 60px;
+	background-color:#FE0000;
+    }
+
+    a.Cidade_Comentario_Mensagem_1_Link {
+	color: #000;
+	text-decoration: none;
+	font-family: Candara, Regular;
+	font-size: 15px;
+	text-align: left;
+	vertical-align: middle;
+}
+
+    p.Cidade_Comentario_Mensagem_1_Texto {
+	margin-left: 75px;
+    }
+
+    hr.Cidade_Comentario_Mensagem_1_Separa {
+	margin-left: 0px;
+	margin-top: 0px;
+	display: inline;
+	float: left;
+	height: 3px;
+	margin-bottom: 0;
+	width: 814px;
+	background-color:#FE0000;
+    }
+
+    h1.Cidade_Escola_Titulo {
+	margin-left: 2px;
+	margin-top: 20px;
+	display: inline;
+	margin-bottom: 0;
+	width: 100%;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 30px;
+	color: #006BB9;
+	text-align: left;
+	font-weight: bold;
+    float:left;
+    }
+
+    #Cidade_Escola_borda {
+        display:none;
+    }
+
+    #Cidade_Escola_borda_2 {
+	margin-left: 0px;
+	margin-top: 3px;
+	display: inline;
+	float: left;
+	height: 197px;
+	margin-bottom: 0;
+	width: 100%;
+    border: 2px solid #FE0000;
+    border-radius: 9px;
+    }
+
+
+}

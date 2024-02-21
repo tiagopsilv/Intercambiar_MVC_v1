@@ -1,0 +1,291 @@
+﻿body {
+}
+
+#eufui_perfil {
+    width: 160PX;
+    height: 160px;
+    background: #FE0000;
+    float:left;
+    margin-top: 20px;
+}
+
+h1.eufui_nome {
+    float:left;
+    margin-top: 12px;
+    margin-left: 10px;
+    font-family: Candara;
+    font-size: 30px;
+	text-align: left;
+	font-weight: bold;
+    width: 70%;
+    padding-top: 0px;
+    padding-bottom: 0px;
+
+}
+
+h2.eufui_lugar {
+    float:left;
+    margin-top: -22px;
+    margin-left: 10px;
+    font-family: Candara;
+    font-size: 20px;
+    text-align: left;
+    font-weight: bold;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    width: 80%;
+}
+
+#Stars{
+    float:left;
+    width: 80%;
+    margin-left: 10px;
+}
+
+img.eufui_star {
+    float:left;
+    width: 39px;
+    height: 36px;
+    margin-top: -12px;
+    margin-left: 10px;
+}
+
+h3.eufui_cidadefui{
+    float:left;
+    margin-top: 10px;
+    margin-left: 10px;
+    font-family: Candara;
+    font-size: 20px;
+    text-align: left;
+    font-weight: bold;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    color: #ffffff;
+    background-color: #006BB9;
+    
+}
+
+h1.eufui_titulo {
+    float:left;
+    width: 90%;
+    font-family: 'Arbutus Slab', serif;
+    color: #FE0000;
+    font-size: 50px;
+    margin-top: 30px;
+}
+
+p.eufui_Descricao {
+    width: 40%;
+    float:left;
+    font-family: Candara;
+    font-size: 20px;
+    text-align: left;
+    margin-top: -22px;
+}
+
+strong.eufui_Descricao_titulo {
+    color: #006BB9;
+}
+
+h2.eufui_SubTitulo {
+    color: #006BB9;
+    margin-top: 10px;
+    font-family: Candara;
+    font-size: 30px;
+    text-align: left;
+    font-weight: bold;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    width: 80%;
+    float:left;
+}
+
+img.eufui_Logo_Agencia {
+    float:left;
+    width: 277px;
+    height:285px;
+}
+
+p.eufui_Item_Texto{
+    font-family: Candara;
+    font-size: 20px;
+    text-align: left;
+    width: 70%;
+    float:left;
+    margin-top: -1px;
+    margin-left: 10px;
+}
+
+a.eufui_LinkPeril{
+    color: black;
+}
+
+h3.eufui_VejaPerfil {
+   float: Right;
+   width: 83%;
+   margin-top: -10px;
+   color: #006BB9;
+   text-decoration: underline;
+   font-size: 14px;
+}
+
+a.linkGUIA{
+    float: left;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	color: #005F95;
+	text-align: left;
+	vertical-align: middle;
+	font-weight: bold;
+    margin-top: 20px;
+    width:100%;
+    text-decoration:none; 
+}
+
+#eufui_FotoNomeEscola{
+    width: 277px;
+    float:left;
+}
+
+img.eufui_FotoNomeEscola_Foto {
+    width: 277px;
+    height: 203px;
+    float:left;
+}
+
+h3.eufui_FotoNomeEscola_Nome {
+    width: 277px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 20px;
+	color: #005F95;
+    text-align:center;
+}
+
+#Texto{
+    float:left;
+}
+
+h1.eufui_TituloComentarios {
+    float:left;
+    color: #FFFFFF;
+    background-color: #FF1C01;
+    width: 270px;
+    text-align:center;
+    height: 34px;
+    font-family: Candara;
+    font-size: 22px;
+}
+
+#eufui_Comentarios {
+    margin-top: -18px;
+    float:left;
+    width: 1000px;
+    height: 200px;
+    border-style: solid;
+    border-color: #7D7D7D;
+    border-width: 1px;
+    overflow: scroll;  
+	overflow-x: hidden; 
+    scrollbar-base-color:#ffeaff;
+}
+
+#eufui_Comentarios_foto_pergunta {
+    float:left;
+    width: 60px;
+    height: 60px;
+    background: #FE0000;
+}
+
+h2.eufui_Comentarios_Nome {
+    margin-top: 0px;
+    margin-left: 7px;
+    float:left;
+    color:#00226C;
+	font-family: Arial, Regular;
+	font-size: 15px;
+    width: 80px;
+    height: 60px;
+}
+
+p.eufui_Comentarios_Pergunta {
+    margin-top: 0px;
+    float:left;
+    color: #FF1C01;
+    font-family: Candara;
+    font-size: 20px;
+    font-weight: bold;
+    width: 800px;
+}
+
+#eufui_Comentarios_Respota {
+    margin-top: -5px;
+    background-color: #EDEDED;
+    display: block;
+    width: 974px;
+    float:left;
+    margin-left: 6px;
+}
+
+p.eufui_Comentarios_Respota_texte {
+    margin-top: 0px;
+    float:left;
+    color: #000000;
+    font-family: Candara;
+    font-size: 20px;
+    width: 900px;
+}
+
+#eufui_Comentarios_foto_resposta {
+    float:left;
+    width: 60px;
+    height: 60px;
+    background: #FE0000;
+    margin-left: 7px;
+}
+
+h1.eufui_TituloComentarios_Escreve {
+    float:left;
+}
+
+#txtComentario {
+    margin-top: -10px;
+    float:left;
+	background-repeat:repeat-x;
+	border:1px solid #d1c7ac;
+	width: 230px;
+	color:#333333;
+	padding:3px;
+	margin-right:4px;
+	margin-bottom:8px;
+	font-family:tahoma, arial, sans-serif;
+    width: 1000px;
+    height: 20px;
+    vertical-align:top;
+}
+
+h1.eufui_TituloComentarios_Escreve {
+    color:#3498db;
+}
+
+a.btn { 
+  float:right;
+  background: #3498db;
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+a.btn:hover {
+  background: #3cb0fd;
+  background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+  text-decoration: none;
+}

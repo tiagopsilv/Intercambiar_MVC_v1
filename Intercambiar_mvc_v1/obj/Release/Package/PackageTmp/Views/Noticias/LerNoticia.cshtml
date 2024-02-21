@@ -1,0 +1,182 @@
+﻿@model Intercambiar_mvc_v1.Models.Noticia
+
+@{
+    ViewBag.Title = @Html.DisplayFor(model => model.Titulo);
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    var html1 = MvcHtmlString.Create(Model.Texto);
+
+    string Descrip = html1.ToString().Substring(0, 156).ToString();
+
+    Descrip = Descrip.Replace("<p>", "");
+    Descrip = Descrip.Replace("</p>", "");
+    
+    ViewBag.description = String.Format("<meta name=\"description\" content=\"{0}\">", Descrip);
+}
+
+@section head{
+    <link href="~/Content/LerNoticia.css" rel="stylesheet" />
+}
+
+@section script{
+    <script src="~/Scripts/_LerNoticia.js"></script>
+}
+
+
+<main id="Texto">
+    <article id="Texto_esquerda">
+
+        <header>
+            <h1>@Html.DisplayFor(model => model.Titulo)</h1>
+
+            <p class="author">@Html.DisplayFor(model => model.Autor) | <span><time> @Html.DisplayFor(model => model.Data) </time></span></p>
+
+            <figure id="figure_noticia">
+                <img src=@Html.DisplayFor(model => model.Imagem) id="img_noticia" alt="" />
+            </figure>
+
+            <ul>
+                <li class="title">Compartilhe:</li>
+                <li><a id="FaceInter" href="#"><img src="~/Imagens/Noticias/facebook_noticia.png" alt="Facebook Share Button" title="Facebook Share Button" class="Compartilhe" />Facebook</a></li>
+                <li>|</li>
+                <li><a href="http://twitter.com/intent/tweet?url=@Request.Url.GetLeftPart(UriPartial.Path)&text=@ViewBag.LinkTwitter&via=intercambiar&related=yarrcat" target="_blank"><img src="~/Imagens/Noticias/twitter_noticia.png" alt="" class="Compartilhe" />Twitter</a></li>
+                <li>|</li>
+                <li><a href="https://plus.google.com/share?url={@Request.Url.GetLeftPart(UriPartial.Path)}" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><img src="~/Imagens/Noticias/googleplus_noticia.png" alt="" class="Compartilhe" />Google+</a></li>
+            </ul>
+
+        </header>
+
+        @Html.Raw(html1)
+
+        <section id="Texto_Comentario">
+            <header>
+                <h3>Comentários</h3>
+            </header>
+            <section id="Texto_Comentario_Caixa">
+                <h3 id="Texto_Comentario_Caixa_comentar"> Click aqui para Comentar </h3>
+                <ul id="Texto_Comentario_Caixa_Lista">
+
+                </ul>
+            </section>
+            <section id="Texto_Comentario_NaoLogado">
+                <h3 id="Texto_Comentario_Caixa_Voltar"> Voltar </h3>
+                <ul id="Texto_Comentario_NaoLogado_Login">  
+                    <li id="Texto_Comentario_NaoLogado_Login_FaceLoginTxt">Entrar com o Facebook</li>
+                    <li><hr /></li>
+                    <li id="Texto_Comentario_NaoLogado_Login_FaceLogin">Fazer Login</li>
+                    <li id="inline-popups2"><hr /></li>
+                    <li id="Texto_Comentario_NaoLogado_Login_Cadastrar" data-effect="mfp-zoom-out">Cadastre-se</li>
+                </ul>
+            </section>
+            <section id="Texto_Comentario_Texto">
+                <h3 id="Texto_Comentario_Texto_Voltar"> Voltar </h3>
+                @Html.TextArea("Comentario_Inputtext", string.Empty, 10, 55, null) 
+                <button type="button" id="Comentario_Enviar">Enviar</button>
+            </section>
+        </section>
+
+    </article>
+
+
+
+    <section id="Texto_direita">
+
+        <div id="Texto_sidebars">
+
+            <ins class="adsbygoogle"
+                 style="display:inline-block;width:336px;height:280px"
+                 data-ad-client="ca-pub-1533126140762745"
+                 data-ad-slot="5180076795"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+
+        </div>
+
+        <hr class="separa" />
+
+        <div id="extras">
+            <div id="recommended">
+                <h2 class="heading">Últimas notícias</h2>
+                <ul>
+
+                    @{
+                        var count = 1;
+                        foreach (var Item in ViewBag.NoticiaRecentes)
+                        {
+                            if (count != Enumerable.Count(ViewBag.NoticiaRecentes))
+                            {
+                                @Html.Raw("<li>");
+                        @Html.ActionLink((string)(@Item.Titulo + "»"), "LerNoticia", new { id = @Item.ID });
+                        @Html.Raw("</li>");
+                            }
+                            else
+                            {
+                                @Html.Raw("<li class=\"last\">");
+                        @Html.ActionLink((string)(@Item.Titulo + "»"), "LerNoticia", new { id = @Item.ID });
+                        @Html.Raw("</li>");
+                            }
+                            count += 1;
+                        }
+                    }
+
+                </ul>
+                <p>@Html.ActionLink("Mais notícias »", "Listar", "Lista", new { tp = "n", or = 1 }, null)</p>
+            </div>
+
+        </div>
+
+        <hr class="separa" />
+        <div id="Texto_sidebars">
+
+            <ins class="adsbygoogle"
+                 style="display:inline-block;width:300px;height:250px"
+                 data-ad-client="ca-pub-1533126140762745"
+                 data-ad-slot="9610276392"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+
+        </div>
+
+        <hr class="separa" />
+
+        @{
+            int i = 800;
+            while (Model.Texto.Length > i)
+            {
+                if (i == 800)
+                {
+
+                    @Html.Raw("<div id=\"Texto_Destaque_Mes\">" +
+                              "<h2 class=\"heading-blue\">Destaque do Mês</h2>" +
+                              "<img src=\"" + ViewBag.Destaque.Imagem + "\" width=\"279px\" height=\"200px\" alt=\"\" />" +
+                              "<h3>");
+            @Html.ActionLink((string)ViewBag.Destaque.Titulo, "LerNoticia", new { id = ViewBag.Destaque.ID })
+            @Html.Raw("</h3><p>");
+            @Html.ActionLink("Veja Mais »", "LerNoticia", new { id = @ViewBag.Destaque.ID })
+            @Html.Raw("</p></div>");
+
+                }
+                else
+                {
+                    <div>
+                        <!-- Intercambiar_dinamic -->
+                        <ins class="adsbygoogle"
+                             style="display:inline-block;width:300px;height:600px"
+                             data-ad-client="ca-pub-1533126140762745"
+                             data-ad-slot="1731925992"></ins>
+                        <script>
+                            (adsbygoogle = window.adsbygoogle || []).push({});
+                        </script>
+                    </div>
+                }
+                <hr class="separa" />
+                i += 1500;
+            }
+
+        }
+
+    </section>
+
+</main>

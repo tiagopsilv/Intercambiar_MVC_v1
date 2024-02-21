@@ -1,0 +1,148 @@
+﻿@model IEnumerable<Intercambiar_mvc_v1.Models.Lista>
+
+@{
+    ViewBag.Title = "Listar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+@section head{
+    <link href="~/Content/Lista.css" rel="stylesheet" />
+
+    <script>
+
+        $('#buttonID').click(function() {
+            alert('click called.');
+        });
+
+        function ObtenhaClienteViaAjax() {
+            $.ajax({
+                dataType: "json",
+                type: "GET",
+                url: "/Lista/GetDados",
+                success: function (dados) {
+                    $(dados).each(function (i) {
+                        document.writeln("<p>Titulo: " + dados[i].Titulo + " | Texto: " + dados[i].Texto + "</p>")
+                    });
+                }
+            });
+        };
+    </script>
+
+}
+
+<div style="display: inline-block; width: 200px; height: 40px; margin: 1em;">
+</div>
+<div id="Lista">
+
+@foreach (Intercambiar_mvc_v1.Models.Lista sLista in Model)
+{
+
+    <a href=@sLista.URL>
+        <div class="Item">
+            <img src=@sLista.Imagem width="147" height="83" />
+
+            @{
+
+    string Tituloletra = "Empty";
+    int TituloPosicao = 70;
+    string STitulo;
+
+    if (@sLista.Titulo.Length > TituloPosicao)
+    {
+        while (Tituloletra != " " && @sLista.Titulo.Length != TituloPosicao)
+        {
+            if (@sLista.Titulo.Length > TituloPosicao)
+            {
+                Tituloletra = @sLista.Titulo.Substring(TituloPosicao, 1);
+                TituloPosicao += 1;
+            }
+        }
+    }
+    else
+    {
+        TituloPosicao = @sLista.Titulo.Length;
+    }
+
+    STitulo = @sLista.Titulo.Substring(0, TituloPosicao).Replace("<p>", "").Replace("</p>", "");
+
+    if (@sLista.Titulo.Length != TituloPosicao)
+        STitulo += "...";
+
+            }
+
+            <h1>@Html.Raw(STitulo)</h1>
+            <p>
+
+                @{
+
+    string letra = "Empty";
+    int Posicao = 200;
+    string Stexto;
+
+    if (@sLista.Texto.Length > Posicao)
+    {
+        while (letra != " ")
+        {
+            letra = @sLista.Texto.Substring(Posicao, 1);
+            Posicao += 1;
+        }
+    }
+    else
+    {
+        Posicao = @sLista.Texto.Length;
+    }
+       
+
+    Stexto = @sLista.Texto.Substring(0, Posicao).Replace("<p>", "").Replace("</p>", "") + "...";
+
+                }
+
+                @Html.Raw(Stexto)
+
+            </p>
+        </div>
+    </a>
+
+    <hr class="Lista_Barra" />
+    
+}
+
+
+            <div id="Lista_Toolbar">
+
+
+                @{
+                    
+                    string Link1 = "";
+                    string Link2 = "";
+                    string Link3 = "";
+                    string Link4 = "";
+                    string Link5 = "";
+
+                    if (@ViewBag.ordem == "1")
+                    {
+                        Link1 = "<a href=\"/Lista/Listar?tp=" + ViewBag.Tipo + "&or=1\"><div class=\"Lista_Toolbar_Botao\"><</div></a>";
+                    }
+                    else
+                    {
+                        Link1 = "<a href=\"/Lista/Listar?tp=" + ViewBag.Tipo + "&or=" + (Convert.ToInt32(ViewBag.ordem) - 1).ToString() + "\"><div class=\"Lista_Toolbar_Botao\"><</div></a>";
+                    }
+
+                    Link2 = "<a href=\"/Lista/Listar?tp=" + ViewBag.Tipo + "&or=" + (Convert.ToInt32(ViewBag.ordem) + 1).ToString() + "\"><div class=\"Lista_Toolbar_Botao\">" + (Convert.ToInt32(ViewBag.ordem) + 1).ToString() + "</div></a>";
+                    Link3 = "<a href=\"/Lista/Listar?tp=" + ViewBag.Tipo + "&or=" + (Convert.ToInt32(ViewBag.ordem) + 2).ToString() + "\"><div class=\"Lista_Toolbar_Botao\">" + (Convert.ToInt32(ViewBag.ordem) + 2).ToString() + "</div></a>";
+                    Link4 = "<a href=\"/Lista/Listar?tp=" + ViewBag.Tipo + "&or=" + (Convert.ToInt32(ViewBag.ordem) + 3).ToString() + "\"><div class=\"Lista_Toolbar_Botao\">" + (Convert.ToInt32(ViewBag.ordem) + 3).ToString() + "</div></a>";
+
+                    Link5 = "<a href=\"/Lista/Listar?tp=" + ViewBag.Tipo + "&or=" + (Convert.ToInt32(ViewBag.ordem) + 1).ToString() + "\"><div class=\"Lista_Toolbar_Last\">></div></a>";
+                
+                }
+
+                @Html.Raw(Link1)
+                @Html.Raw(Link2)
+                @Html.Raw(Link3)
+                @Html.Raw(Link4)
+                @Html.Raw(Link5)
+            </div>
+
+</div>

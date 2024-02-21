@@ -1,0 +1,142 @@
+﻿#Lista div.Item {
+	margin-top: 10px;
+	margin-left: 0px;
+	margin-top: 2px;
+	width: 1019px;
+	height: 83px;
+	text-align: left;
+	vertical-align: top;
+	display: inline;
+	float: left;
+	margin-bottom: 0;
+	border: 2px solid #006BB8;
+    border-radius: 9px;
+}
+
+#Lista h1 {
+	vertical-align: top;
+	font-weight: normal;
+	letter-spacing: -1px;
+	margin-right: 5px;
+	margin: 0 0 6px 0;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 25px;
+	color: #EC1B24;
+	text-align: left;	
+}
+
+#Lista {
+	margin-top: 10px;
+	float: none;
+}
+
+#Lista img {
+	float: left;
+}
+
+#Lista p {
+	float: left;
+	width:865px;
+	font-size: 1.0em;
+	line-height: 1.4em;
+	margin-top: 0;
+	margin-right: 0;
+	margin-bottom: 16px;
+	margin-left: 5;
+	display: inline;
+	top: 30px;
+	font-family: Candara, Regular;
+	font-size: 16px;
+	color: #000;
+	text-align: left;
+    scrollbar-base-color:#ffeaff;
+}
+
+#Lista div.Item:hover {
+  background-color: #CCC;
+}
+
+#Lista a {
+  text-decoration: none;
+}
+
+hr.Lista_Barra {
+	margin-left: 0px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	display: table;
+	float: left;
+    height:0px;
+	width: 1018px;
+	border-color: #FF1C00;
+	margin-right: 0px;
+}
+
+#Lista_Toolbar {
+	float: left;
+	width:300px;	
+}
+
+#Lista_Toolbar div.Lista_Toolbar_Botao {
+	border-right: 1px solid #006BB8;
+}
+
+#Lista_Toolbar div.Lista_Toolbar_Botao, div.Lista_Toolbar_Last {
+	float: left;
+	width:20px;
+	height:20px;
+	color:#FF1C00;
+    text-align: center;
+}
+
+#Lista_Toolbar div.Lista_Toolbar_Botao:hover, div.Lista_Toolbar_Last:hover {
+	background-color:#CCC;
+}
+
+/* Media for larger devices */
+@media screen and (max-width: 750px) {
+    #Lista div.Item {
+        margin-top: 10px;
+        margin-left: 0px;
+        margin-top: 2px;
+        width: 100%;
+        height: 100%;
+        text-align: left;
+        vertical-align: top;
+        display: inline;
+        float: left;
+        margin-bottom: 0;
+        border: 2px solid #006BB8;
+        border-radius: 9px;
+    }
+
+    #Lista p {
+	float: left;
+	width:100%;
+	font-size: 1.0em;
+	line-height: 1.4em;
+	margin-top: 0;
+	margin-right: 0;
+	margin-bottom: 16px;
+	margin-right: -3px;
+	display: inline;
+	top: 30px;
+	font-family: Candara, Regular;
+	font-size: 16px;
+	color: #000;
+	text-align: left;
+    scrollbar-base-color:#ffeaff;
+}
+
+    hr.Lista_Barra {
+	margin-left: 0px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	display: table;
+	float: left;
+    height:0px;
+	width: 100%;
+	border-color: #FF1C00;
+	margin-right: 0px;
+}
+}

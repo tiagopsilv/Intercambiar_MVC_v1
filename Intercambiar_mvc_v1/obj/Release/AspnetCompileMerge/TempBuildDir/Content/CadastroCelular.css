@@ -1,0 +1,18 @@
+﻿.Cad_Usuario_Celular {
+    float: left;
+    width: 80%;
+    height: 30px;
+    margin-top: 7px;
+    margin-left: 10px;
+}
+
+.Cad_Usuario_Titulo_Celular {
+    width: 80%; 
+    float: left; 
+    margin-left: 10px; 
+    margin-top: 10px
+}
+
+.bordered {
+    border: 2px solid #ff0000;
+}

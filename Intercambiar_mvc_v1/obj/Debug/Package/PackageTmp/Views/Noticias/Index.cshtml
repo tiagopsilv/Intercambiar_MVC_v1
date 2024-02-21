@@ -1,0 +1,203 @@
+﻿@{
+    ViewBag.Title = "Intercambiar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    ViewBag.description = String.Format("<meta name=\"description\" content=\"{0}\">", "INTERCAMBIAR - Vamos intercambiar! Intercambiar é experimentar o mundo! Trocar experiências, rir dos micos, compartilhar aventuras, conhecer pessoas de todo o mundo. É muito mais do que aprender um novo idioma!!!");
+   
+}
+
+@section head{
+    <link href="~/Content/Noticias.css" rel="stylesheet" />
+}
+
+<div id="Noticia_Compartilhar">
+    <ul>
+        <li class="title">Compartilhe:</li>
+        <li><a href="https://www.facebook.com/pages/Intercambiar/341237582599110?fref=ts" target="_blank"><img src="~/Imagens/Noticias/facebook_noticia.png" alt="" />Facebook</a></li>
+        <li>|</li>
+        <li><a href="http://twitter.com/intent/tweet?url=@Request.Url.GetLeftPart(UriPartial.Path)&text=Intercambiar&via=intercambiar&related=yarrcat" target="_blank"><img src="~/Imagens/Noticias/twitter_noticia.png" alt="" class="Compartilhe" />Twitter</a></li>
+        <li>|</li>
+        <li><a href="https://plus.google.com/share?url={@Request.Url.GetLeftPart(UriPartial.Path)}" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><img src="~/Imagens/Noticias/googleplus_noticia.png" alt="" class="Compartilhe" />Google+</a></li>
+
+    </ul>
+</div>
+<!-- END SUB NAV -->
+<!-- BEGIN CONTENT WRAPPER -->
+
+<div id="Only_to_phones">
+    <div id="Phones">
+        <h2 class="heading">Agora</h2>
+        <img src="@ViewBag.PrimeiraNoticia.Imagem" alt="" id="Img_phone" />
+        <h1>@Html.ActionLink((string)ViewBag.PrimeiraNoticia.Titulo, "LerNoticia", new { id = @ViewBag.PrimeiraNoticia.ID })</h1>
+        <p class="author">@ViewBag.PrimeiraNoticia.Autor | <span>@ViewBag.PrimeiraNoticia.Data</span></p>
+        <p>@ViewBag.PrimeiraNoticia.Texto</p>
+        <p>@Html.ActionLink("Veja Mais »", "LerNoticia", new { id = @ViewBag.PrimeiraNoticia.ID })</p>
+
+        <h2 class="heading">Último Video</h2>
+        <div id="Video_Borda">
+            <iframe width="100%" height="300"
+                    src="@ViewBag.Video.URL" frameborder="0" allowfullscreen></iframe>
+        </div>
+        </h2>
+        <p>@Html.ActionLink("Mais Videos »", "Listar", "Lista", new { tp = "v", or = 1 }, null)</p>
+
+
+        <div id="more-headlines">
+            <h2 class="heading">Útimas Noticias</h2>
+
+            @foreach (var Item in ViewBag.ColunaMeio)
+            {
+                <h1>@Html.ActionLink((string)@Item.Titulo, "LerNoticia", new { id = @Item.ID })</h1>
+                <p class="author">@Item.Autor | <span> @Item.Data</span></p>
+                <p>@Item.Texto</p>
+
+                <p>@Html.ActionLink("Veja Mais »", "LerNoticia", new { id = @Item.ID })</p>
+
+            }
+
+        </div>
+
+        <h2 class="heading">Últimas notícias</h2>
+        <ul>
+
+            @{
+
+                int Photoscount = 1;
+                foreach (var Item in ViewBag.ListarNoticasAntigasIndex)
+                {
+                    if (Photoscount != Enumerable.Count(ViewBag.ListarNoticasAntigasIndex))
+                    {
+                        @Html.Raw("<li>");
+                @Html.ActionLink((string)(@Item.Titulo + " »"), "LerNoticia", new { id = @Item.ID });
+                @Html.Raw("</li>");
+                    }
+                    else
+                    {
+                        @Html.Raw("<li class=\"last\">");
+                @Html.ActionLink((string)(@Item.Titulo + " »"), "LerNoticia", new { id = @Item.ID });
+                @Html.Raw("</li>");
+                    }
+                    Photoscount += 1;
+                }
+            }
+
+        </ul>
+        <p>@Html.ActionLink("Mais notícias »", "Listar", "Lista", new { tp = "n", or = 1 }, null)</p>
+
+    </div>
+</div>
+
+<div id="content-wrapper">
+    <!-- BEGIN MAIN -->
+    <div id="main">
+ 
+        <div id="headlines">
+
+            <div id="main-headline">
+               
+                <h2 class="heading">Agora</h2>
+                <img src="@ViewBag.PrimeiraNoticia.Imagem" alt="" width="400px" height="220px" />
+                
+                <h1>@Html.ActionLink((string)ViewBag.PrimeiraNoticia.Titulo, "LerNoticia", new { id = @ViewBag.PrimeiraNoticia.ID })</h1>
+                <p class="author">@ViewBag.PrimeiraNoticia.Autor | <span>@ViewBag.PrimeiraNoticia.Data</span></p>
+                <p>@ViewBag.PrimeiraNoticia.Texto</p>
+                <p>@Html.ActionLink("Veja Mais »", "LerNoticia", new { id = @ViewBag.PrimeiraNoticia.ID })</p>
+
+                <h2 class="heading">Último Video</h2>
+                <div id="Video_Borda">
+                    <iframe width="400" height="300"
+                            src="@ViewBag.Video.URL" frameborder="0" allowfullscreen></iframe>
+                </div>
+                </h2>
+                <p>@Html.ActionLink("Mais Videos »", "Listar", "Lista", new { tp = "v", or = 1 }, null)</p>
+                <div id="Bloco1">
+                    <ins class="adsbygoogle"
+                         style="display:inline-block;width:300px;height:250px"
+                         data-ad-client="ca-pub-1533126140762745"
+                         data-ad-slot="9610276392"></ins>
+                    <script>
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
+            </div>
+            <div id="more-headlines">
+                <h2 class="heading">Útimas Noticias</h2>
+                
+                @foreach (var Item in ViewBag.ColunaMeio)
+                {
+                    <h3>@Html.ActionLink((string)@Item.Titulo, "LerNoticia", new { id = @Item.ID })</h3>
+                    <p class="author">@Item.Autor | <span> @Item.Data</span></p>
+                    <p>@Item.Texto</p>
+                    
+                    <p>@Html.ActionLink("Veja Mais »", "LerNoticia", new { id = @Item.ID })</p>
+                    
+                }
+
+            </div>
+            <!--</div>-->
+        </div>
+    </div>
+    <!-- END MAIN -->
+    <!-- BEGIN SIDEBARS -->
+    <div id="sidebars">
+        <!-- Intercambiar_right -->
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:336px;height:280px"
+             data-ad-client="ca-pub-1533126140762745"
+             data-ad-slot="5180076795"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+        <!-- END ADS -->
+        <h2 class="heading-blue">Destaque do Mês</h2>
+        <img src="@ViewBag.Destaque.Imagem" width="279px" height="200px" alt="" />
+        <h3>@Html.ActionLink((string)@ViewBag.Destaque.Titulo, "LerNoticia", new { id = @ViewBag.Destaque.ID })</h3>
+        <p>@ViewBag.Destaque.Texto</p>
+        <p>@Html.ActionLink("Veja Mais »", "LerNoticia", new { id = @ViewBag.Destaque.ID })</p>
+        <div id="Bloco2">
+            <!-- Intercambiar_down_right -->
+            <ins class="adsbygoogle"
+                 style="display:inline-block;width:300px;height:250px"
+                 data-ad-client="ca-pub-1533126140762745"
+                 data-ad-slot="9610276392"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+    </div>
+
+    <!-- END SIDEBARS -->
+</div>
+<!-- END CONTENT WRAPPER-->
+<!-- BEGIN EXTRAS -->
+<div id="extras">
+    <div id="recommended">
+        <h2 class="heading">Últimas notícias</h2>
+        <ul>
+
+            @{
+                
+                int count = 1;
+                foreach (var Item in ViewBag.ListarNoticasAntigasIndex)
+                {
+                    if (count != Enumerable.Count(ViewBag.ListarNoticasAntigasIndex))
+                    {
+                        @Html.Raw("<li>");
+                        @Html.ActionLink((string)(@Item.Titulo + " »"), "LerNoticia", new { id = @Item.ID });
+                        @Html.Raw("</li>");
+                    }
+                    else
+                    {
+                        @Html.Raw("<li class=\"last\">");
+                        @Html.ActionLink((string)(@Item.Titulo + " »"), "LerNoticia", new { id = @Item.ID });
+                        @Html.Raw("</li>");
+                    }
+                    count += 1;
+                }
+            }
+
+        </ul> 
+        <p>@Html.ActionLink("Mais notícias »", "Listar", "Lista", new { tp = "n", or = 1 }, null)</p>
+    </div>
+
+</div>

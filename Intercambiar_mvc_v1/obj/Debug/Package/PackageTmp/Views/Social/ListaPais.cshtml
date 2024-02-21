@@ -1,0 +1,30 @@
+﻿@{
+    ViewBag.Title = "ListaPais";
+}
+
+@section head{
+    <link href="~/Content/ListaPais.css" rel="stylesheet" />
+}
+<div id="Corpo">
+    @Html.ActionLink(" Mundo > ", "Destinos", "Social", null, new { @class = "linkGUIA" })
+    <p class="AN_Titulo">Países</p>
+    <div id="Lista">
+    <ul>
+        <li>
+            <a href="/Social/Pais/1" class="linkNomePais">
+                <img src="/Imagens/Bandeira_Lista/AN_CANADA.png" alt="" />
+                <h1>Canadá</h1>
+            </a>
+        </li>
+        <li>
+            <a href="/Social/Pais/1" class="linkNomePais">
+                <img src="/Imagens/Bandeira_Lista/AN_EUA.png" alt="" />
+                <h1>Estados Unidos da América</h1>
+            </a>
+        </li>
+    </ul>
+
+</div>
+
+</div>
+

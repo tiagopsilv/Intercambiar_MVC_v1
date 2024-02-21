@@ -1,0 +1,52 @@
+﻿@model Intercambiar_mvc_v1.Models.Noticia_Relat
+
+@{
+    ViewBag.Title = "Administrador";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section head{
+
+    <link href="~/Content/Administrador.css" rel="stylesheet" />
+}
+
+@section script{
+
+}
+
+
+<article id="main">
+    <section id="Noticias">
+        
+        <h1>Noticias</h1>
+
+        <ul>
+
+
+                                        @{
+
+                    if (ViewBag.Noticia_Relat != null)
+                    {
+                        foreach (var Item in ViewBag.Noticia_Relat)
+                        {
+
+                            <a href="@Url.Action("LerNoticia/" + @Item.id, "Noticias")">
+                                <li>
+                                    <img src="@Item.Imagem" />
+                                    <h3>@Item.Titulo</h3>
+                                    <p>Quantidade de Acesso: @Item.Acesso</p>
+                                    <p>Quantidade de Comentarios: @Item.Comentario</p>
+                                    <p>Quantidade de Novos Usuários via materia: @Item.Novo</p>
+                                </li>
+                            </a>
+
+                        }
+                    }
+
+}
+
+        </ul>
+
+    </section>
+</article>
+

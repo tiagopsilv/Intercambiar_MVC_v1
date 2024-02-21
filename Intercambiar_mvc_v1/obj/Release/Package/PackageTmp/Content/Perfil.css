@@ -1,0 +1,204 @@
+﻿body {
+}
+
+#main {
+    float:left;
+}
+
+#Perfil1 {
+    float:left;
+    width: 400px;
+    height: 128px;
+    background-color: #EDEDED;
+    margin-top: 25px;
+}
+
+#Perfil_Foto_1 {
+    float:left;
+    width: 106px;
+    height: 106px;
+    background-color: #FE0000;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+#Perfil_Nome_1 {
+    float: left;
+    margin-top: 10px;
+    margin-left: 10px;
+    font-family: Candara, Regular;
+    font-size: 1.5em;
+    color:#1D64C9;
+}
+
+#Perfil_Pontuacao_1 {
+    float: left;
+    margin-top: -20px;
+    margin-left: 10px;
+    font-family: Candara;
+    font-size: 1.0em;
+    text-transform: uppercase;
+}
+
+#Perfil_Pontos_1 {
+    float: left;
+    margin-top: -23px;
+    margin-left: 5px;
+    color:#FF1C00;
+}
+
+img.Perfil_cls_Star_1 {
+    float: left;
+    margin-top: 15px;
+    margin-left: 10px;
+}
+
+#Perfil_Star_1 {
+    margin-left: -150px;
+}
+#Perfil_Star_2 {
+    margin-left: -120px;
+}
+#Perfil_Star_3 {
+    margin-left: -90px;
+}
+#Perfil_Star_4 {
+    margin-left: -60px;
+}
+#Perfil_Star_5 {
+    margin-left: -30px;
+}
+
+#Painel1 {
+    float:left;
+    width: 599px;
+    height: 128px;
+    background-color: #EDEDED;
+    margin-top: 25px;
+    margin-left: 20px;
+}
+
+#Painel_Dicas_1 {
+    float:left;
+    margin-top: 15px;
+    margin-left: 20px;
+    font-family: Candara;
+    font-size: 1.5em;
+    text-transform: uppercase;
+}
+
+#Painel_Viagens_1 {
+    float:left;
+    margin-top: 15px;
+    margin-left: 20px;
+    font-family: Candara;
+    font-size: 1.5em;
+    text-transform: uppercase;
+}
+#Painel_Respostas_1 {
+    float:left;
+    margin-top: 10px;
+    margin-left: 20px;
+    font-family: Candara;
+    font-size: 1.5em;
+    text-transform: uppercase;
+}
+#Painel_Gols_1 {
+    float:left;
+    margin-top: 10px;
+    margin-left: 20px;
+    font-family: Candara;
+    font-size: 1.5em;
+    text-transform: uppercase;
+}
+
+#Painel_Dicas_Img_1 {
+    float:left;
+    margin-top: 15px;
+    margin-left: 60px;
+    width: 26px;
+    height: 26px;
+    background-color: #FE0000;
+}
+
+#Painel_Viagens_Img_1 {
+    float:left;
+    margin-top: 15px;
+    margin-left: 7%;
+    width: 26px;
+    height: 26px;
+    background-color: #FE0000;
+}
+#Painel_Respostas_Img_1 {
+    float:left;
+    margin-top: 10px;
+    margin-left: 60px;
+    width: 26px;
+    height: 26px;
+    background-color: #FE0000;
+}
+#Painel_Gols_Img_1 {
+    float:left;
+    margin-top: 10px;
+    margin-left: 7%;
+    width: 26px;
+    height: 26px;
+    background-color: #FE0000;
+}
+
+#Painel_Dicas_Quant_1 {
+    float:left;
+    margin-top: 15px;
+    margin-left: 10px;
+    font-family: Candara;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    color:#1D64C9;
+    height: 30%;
+}
+
+#Painel_Viagens_Quant_1 {
+    float:left;
+    margin-top: 15px;
+    margin-left: 10px;
+    font-family: Candara;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    color:#1D64C9;
+    height: 30%;
+}
+#Painel_Respostas_Quant_1 {
+    float:left;
+    margin-top: 10px;
+    margin-left: 10px;
+    font-family: Candara;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    color:#1D64C9;
+    height: 30%;
+}
+#Painel_Gols_Quant_1 {
+    float:left;
+    margin-top: 10px;
+    margin-left: 10px;
+    font-family: Candara;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    color:#1D64C9;
+    height: 30%;
+}
+
+#Painel_Hr{
+    margin-top: 62px;
+    margin-left: 0px;
+    background-color: white;
+    border-color: white;
+    border-bottom-style: solid;
+    height: 1px;
+}
+
+section.Painel_separa_1 {
+    float: left; 
+    width: 50%; 
+    height:40%;
+}

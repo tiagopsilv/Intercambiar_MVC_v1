@@ -1,0 +1,76 @@
+﻿@model Intercambiar_mvc_v1.Models.Perfil
+
+@{
+    ViewBag.Title = "Perfil";
+    
+}
+
+@section head{
+    <link href="~/Content/Perfil.css" rel="stylesheet" />
+}
+
+@section script{
+    <script src="~/Scripts/_Perfil.js"></script>
+}
+
+<article id="main">
+    <section id="Perfil1">
+        <img id="Perfil_Foto_1" />
+            <h1 id="Perfil_Nome_1"></h1>
+            <h2 id="Perfil_Pontuacao_1">Pontuação no Ranking: </h2>
+            <h3 id="Perfil_Pontos_1">@Model.Pontuacao</h3>
+            @{
+                if (Model.Estrelas >= 5) {
+                    @Html.Raw("<img src=\"/Imagens/Estrela.gif\" class=\"Perfil_cls_Star_1\" id=\"Perfil_Star_1\" />");
+                }
+                if (Model.Estrelas >= 3)
+                {
+                    @Html.Raw("<img src=\"/Imagens/Estrela.gif\" class=\"Perfil_cls_Star_1\" id=\"Perfil_Star_2\" />");
+                }
+                if (Model.Estrelas >= 1)
+                {
+                    @Html.Raw("<img src=\"/Imagens/Estrela.gif\" class=\"Perfil_cls_Star_1\" id=\"Perfil_Star_3\" />");
+                }
+                if (Model.Estrelas >= 2)
+                {
+                    @Html.Raw("<img src=\"/Imagens/Estrela.gif\" class=\"Perfil_cls_Star_1\" id=\"Perfil_Star_4\" />");
+                }
+                if (Model.Estrelas >= 4)
+                {
+                    @Html.Raw("<img src=\"/Imagens/Estrela.gif\" class=\"Perfil_cls_Star_1\" id=\"Perfil_Star_5\" />");
+                }
+                   
+            }
+            
+            @*<img src="~/Imagens/Estrela.gif" class="Perfil_cls_Star_1" id="Perfil_Star_1" />
+            <img src="~/Imagens/Estrela.gif" class="Perfil_cls_Star_1" id="Perfil_Star_2" />
+            <img src="~/Imagens/Estrela.gif" class="Perfil_cls_Star_1" id="Perfil_Star_3" />
+            <img src="~/Imagens/Estrela.gif" class="Perfil_cls_Star_1" id="Perfil_Star_4" />
+            <img src="~/Imagens/Estrela.gif" class="Perfil_cls_Star_1" id="Perfil_Star_5" />*@
+        </section>
+    <section id="Painel1">
+        <section class="Painel_separa_1">
+            <img src="~/Imagens/Lampada.gif" id="Painel_Dicas_Img_1" />
+            <h1 id="Painel_Dicas_1">Textos:</h1>
+            <h2 id="Painel_Dicas_Quant_1">@Model.Textos</h2>
+        </section>
+        <section class="Painel_separa_1">
+            <img src="~/Imagens/Aviao.gif" id="Painel_Viagens_Img_1" />
+            <h1 id="Painel_Viagens_1">Viagens:</h1>
+            <h2 id="Painel_Viagens_Quant_1">@Model.Viagens</h2>
+        </section>
+        <hr id="Painel_Hr" />
+        <section class="Painel_separa_1">
+            <img src="~/Imagens/Resposta.gif" id="Painel_Respostas_Img_1" />
+            <h1 id="Painel_Respostas_1">Comentarios:</h1>
+            <h2 id="Painel_Respostas_Quant_1">@Model.Comentarios</h2>
+        </section>
+        <section class="Painel_separa_1">
+            <img src="~/Imagens/Gols.gif" id="Painel_Gols_Img_1" />
+            <h1 id="Painel_Gols_1">Gols:</h1>
+            <h2 id="Painel_Gols_Quant_1">@Model.Gols</h2>
+        </section>
+    </section>
+</article>
+
+

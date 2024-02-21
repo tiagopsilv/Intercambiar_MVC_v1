@@ -1,0 +1,325 @@
+﻿@charset "utf-8";
+
+body {
+	background-color: #fff;
+	font-size: 62.5%;
+	margin: 0;
+	padding: 0;
+}
+body * {
+	font-size: 100%;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-weight: normal;
+}
+p {
+	margin-bottom: 1.1em;
+	margin-top: 0;
+}
+#main p.lastNode {
+	margin-bottom: 0;
+}
+a:link img, a:visited img {
+	border: none;
+}
+div.clearFloat {
+	clear: both;
+	font-size: 0;
+	height: 0;
+	line-height: 0px;
+}
+li.clearFloat {
+	clear: both;
+}
+ul.symbolList {
+	display: inline;
+	float: left;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+.AbsWrap {
+	position: relative;
+	width: 100%;
+}
+.rowWrap {
+	width: 100%;
+}
+#main {
+	margin: 0 auto 0 0;
+	width: 1019px;
+}
+#sobre_img {
+	margin-left: 0px;
+	margin-top: 1px;
+	display: inline;
+	float: left;
+	height: 387px;
+	margin-bottom: 0;
+	width: 1019px;
+}
+#sobre_espaco1 {
+	margin-left: 0px;
+	margin-top: 0px;
+	background-image: url(Imagens/sobre_r2_c1.jpg);
+	overflow: hidden;
+	display: inline;
+	float: left;
+	height: 18px;
+	margin-bottom: 0;
+	width: 1019px;
+}
+#AIntercambiar {
+	margin-left: 0px;
+	margin-top: 0px;
+	overflow: hidden;
+	display: inline;
+	float: left;
+	height: 30px;
+	margin-bottom: 0;
+	width: 1019px;
+}
+#sobre_espaco2 {
+	margin-left: 0px;
+	margin-top: 0px;
+	background-image: url(Imagens/sobre_r4_c1.jpg);
+	overflow: hidden;
+	display: inline;
+	float: left;
+	height: 17px;
+	margin-bottom: 0;
+	width: 1019px;
+}
+#Texto_1 {
+	margin-left: 41px;
+	margin-top: 0px;
+	overflow: hidden;
+	display: inline;
+	float: left;
+	height: 85px;
+	margin-bottom: 0;
+	width: 938px;
+	font-family: Candara, Regular;
+	font-size: 18px;
+	color: #000;
+	text-align: left;
+	vertical-align: middle;
+}
+#sobre_espaco3 {
+	margin-left: 0px;
+	margin-top: 0px;
+	background-image: url(Imagens/sobre_r6_c1.jpg);
+	overflow: hidden;
+	display: inline;
+	float: left;
+	height: 17px;
+	margin-bottom: 0;
+	width: 1019px;
+}
+#Titulo_Como_Comecou {
+	margin-left: 0px;
+	margin-top: 0px;
+	overflow: hidden;
+	display: inline;
+	float: left;
+	height: 29px;
+	margin-bottom: 0;
+	width: 1019px;
+	font-family: Candara, Regular;
+	font-size: 20px;
+	color: #FE0000;
+	text-align: left;
+	vertical-align: 66%;
+	text-indent: 3%;
+}
+#sobre_espaco4 {
+	margin-left: 0px;
+	margin-top: 0px;
+	background-image: url(Imagens/sobre_r8_c1.jpg);
+	overflow: hidden;
+	display: inline;
+	float: left;
+	height: 17px;
+	margin-bottom: 0;
+	width: 1019px;
+}
+#Como_Comecou {
+	margin-left: 41px;
+	margin-top: 0px;
+	overflow: hidden;
+	display: inline;
+	float: left;
+	height: 258px;
+	margin-bottom: 0;
+	width: 938px;
+	font-family: Candara, Regular;
+	font-size: 18px;
+	color: #000;
+	text-align: left;
+	vertical-align: middle;
+}
+#sobre_espaco5 {
+	margin-left: 0px;
+	margin-top: 0px;
+	background-image: url(Imagens/sobre_r10_c1.jpg);
+	overflow: hidden;
+	display: inline;
+	float: left;
+	height: 28px;
+	margin-bottom: 0;
+	width: 1019px;
+}
+#Titulo_Missao {
+	margin-left: 41px;
+	margin-top: 0px;
+	overflow: hidden;
+	display: inline;
+	float: left;
+	height: 22px;
+	margin-bottom: 0;
+	width: 281px;
+	font-family: Candara, Regular;
+	font-size: 18px;
+	color: #0059B1;
+	text-align: left;
+	vertical-align: middle;
+}
+#Titulo_Valores {
+	margin-right: 40px;
+	margin-top: 0px;
+	overflow: hidden;
+	display: inline;
+	float: right;
+	height: 22px;
+	margin-bottom: 0;
+	width: 281px;
+	font-family: Candara, Regular;
+	font-size: 18px;
+	color: #0059B1;
+	text-align: left;
+	vertical-align: middle;
+}
+#Titulo_Visao {
+	margin-right: 49px;
+	margin-top: 0px;
+	overflow: hidden;
+	display: inline;
+	float: right;
+	height: 22px;
+	margin-bottom: 0;
+	width: 281px;
+	font-family: Candara, Regular;
+	font-size: 18px;
+	color: #0059B1;
+	text-align: left;
+	vertical-align: middle;
+}
+#sobre_espaco6 {
+	margin-left: 41px;
+	margin-top: 0px;
+	background-image: url(Imagens/sobre_r12_c2.jpg);
+	overflow: hidden;
+	display: inline;
+	float: left;
+	height: 22px;
+	margin-bottom: 0;
+	width: 281px;
+}
+#sobre_espaco7 {
+	margin-right: 40px;
+	margin-top: 0px;
+	background-image: url(Imagens/sobre_r12_c6.jpg);
+	overflow: hidden;
+	display: inline;
+	float: right;
+	height: 22px;
+	margin-bottom: 0;
+	width: 281px;
+}
+#sobre_espaco8 {
+	margin-right: 49px;
+	margin-top: 0px;
+	background-image: url(Imagens/sobre_r12_c4.jpg);
+	overflow: hidden;
+	display: inline;
+	float: right;
+	height: 22px;
+	margin-bottom: 0;
+	width: 281px;
+}
+#Texto_Missao {
+	margin-left: 41px;
+	margin-top: 0px;
+	overflow: hidden;
+	display: inline;
+	float: left;
+	height: 266px;
+	margin-bottom: 0;
+	width: 281px;
+	font-family: Candara, Regular;
+	font-size: 18px;
+	color: #000;
+	text-align: left;
+	vertical-align: middle;
+}
+#Texto_Valores {
+	margin-right: 40px;
+	margin-top: 0px;
+	overflow: hidden;
+	display: inline;
+	float: right;
+	height: 266px;
+	margin-bottom: 0;
+	width: 281px;
+	font-family: Candara, Regular;
+	font-size: 18px;
+	color: #000;
+	text-align: left;
+	vertical-align: middle;
+}
+#Texto_Visao {
+	margin-right: 49px;
+	margin-top: 0px;
+	overflow: hidden;
+	display: inline;
+	float: right;
+	height: 266px;
+	margin-bottom: 0;
+	width: 281px;
+	font-family: Candara, Regular;
+	font-size: 18px;
+	color: #000;
+	text-align: left;
+	vertical-align: middle;
+}
+
+#Desk {
+    display: block;
+}
+
+#Phones {
+    display: none;
+}
+
+/* Media for larger devices */
+@media screen and (max-width: 750px) {
+#Desk {
+    display: none;
+}
+
+#Phones {
+    display: block;
+    width: 100%;
+	margin-top: 0px;
+	overflow: hidden;
+	display: inline;
+	float: left;
+	height: 100%;
+	margin-bottom: 0;
+	font-family: Candara, Regular;
+	font-size: 18px;
+	color: #000;
+	text-align: left;
+	vertical-align: middle;
+}
+}

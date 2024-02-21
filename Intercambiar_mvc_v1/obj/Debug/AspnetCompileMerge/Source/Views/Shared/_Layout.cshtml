@@ -1,0 +1,344 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="author" content="Nathalia Amorim/Tiago Pereira da Silva">
+
+    <meta property="article:author" content="https://www.facebook.com/Intercambiar-341237582599110/?fref=ts" />
+    <meta property="article:publisher" content="https://www.facebook.com/Intercambiar-341237582599110/?fref=ts" />
+
+    @Html.Raw((String)ViewBag.description)
+    <meta name="keywords" content="intercâmbio, ny, canadá, Toronto, Austrália, viajar, EUA, Estados Unidos, estudar, educação, viagens, experiência, inglês, espanhol, frances, dicas, entretenimento, conhecer, falar, estudando, ir, viajando, intercâmbios, dica">
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/Top.css" rel="stylesheet" />
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @RenderSection("head", required: false)
+
+    <link rel="icon" href="~/Imagens/favicon.ico" type="image/ico" sizes="16x16">
+
+    <link href="~/Content/magnific-popup.css" rel="stylesheet" />
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+    <script src="~/Scripts/jquery.mask.min.js"></script>
+    <script src="~/Scripts/jquery.magnific-popup.js"></script>
+    <!-- Magnific Popup core JS file -->
+
+    <script src="~/Scripts/_Layout.js"></script>
+
+
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+    @RenderSection("script", required: false)
+
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no" />
+
+</head>
+<body>
+
+    <div id="testeCadastrarIntercambiar" class="white-popup_cad mfp-with-anim mfp-hide">
+        <ul class="tabs">
+            <li class="tab-link current" data-tab="tab-1" id="tab_Cad_1">Passo 1</li>
+            <li class="tab-link" data-tab="tab-2" id="tab_Cad_2">Passo 2</li>
+            <li class="tab-link" data-tab="tab-3" id="tab_Cad_3">Passo 3</li>
+            <li class="tab-link" data-tab="tab-4" id="tab_Cad_4">Passo 4</li>
+        </ul>
+        <div id="tab-1" class="tab-content current">
+            <div style="height:320px;width:900px;">
+                <img src="~/Imagens/placas1.jpg" style="width:300px;height:290px;float:left;" />
+                <label style="width: 520px; float: left; margin-left: 10px;">
+                    Cadastre via:
+                </label>
+                <a href="#">
+                    <img src="~/Imagens/facenome.jpg" style="float: left; margin-left: 10px; margin-top: 10px;" />
+                </a>
+                <label style="width: 100px; float: left; margin-top: 20px;margin-left: 10px">
+                    <a href="#">clique aqui</a>
+                </label>
+
+                <label style="width: 520px; float: left; margin-left: 10px;margin-top: 10px;">
+                    ou
+                </label>
+                <label style="width: 320px; float: left; margin-left: 10px; margin-top: 10px">E-mail</label>
+                <input id="cad_Email" name="cad_Email" type="email" placeholder="E-mail" class="Cad_Usuario" />
+                <label style="float: left; margin-left: 10px; margin-top: 15px;">*</label>
+                <img id="cad_Email_ok" src="~/Imagens/OK.png" style="float:left; margin-left: 10px; margin-top: 10px;display:none" />
+                <div id="cad_Email_erro" style="color: red; display: none; float: left; margin-left: 5px; margin-top: 15px;"></div>
+                <label style="width: 320px; float: left; margin-left: 10px;">Primeiro Nome</label>
+                <input id="cad_Primeiro_Nome" name="cad_Primeiro_Nome" type="text" placeholder="Primeiro Nome" class="Cad_Usuario" />
+                <label style="float: left; margin-left: 10px; margin-top: 15px;">*</label>
+                <img id="cad_Primeiro_Nome_ok" src="~/Imagens/OK.png" style="float: left; margin-left: 10px; margin-top: 10px; display: none" />
+                <div id="cad_Primeiro_Nome_erro" style="color: red; display: none; float: left; margin-left: 5px; margin-top: 15px;"></div>
+                <label style="width: 320px; float: left; margin-left: 10px;">Sobrenome</label>
+                <input id="cad_Sobrenome" name="cad_Sobrenome" type="text" placeholder="Sobrenome" class="Cad_Usuario" />
+                <label style="float: left; margin-left: 10px; margin-top: 15px;">*</label>
+                <img id="cad_Sobrenome_ok" src="~/Imagens/OK.png" style="float:left; margin-left: 10px; margin-top: 10px;display:none" />
+                <div id="cad_Sobrenome_erro" style="color: red; display: none; float: left; margin-left: 5px; margin-top: 15px;"></div>
+                <div style="width: 300px; float: left;">
+                    <button id="Cad_1_Proximo" class="Cad_Proximo">Próximo</button>
+                </div>
+        </div>
+        </div>
+        <div id="tab-2" class="tab-content"> 
+            <div style="height:350px; width: 900px;">
+                <img src="~/Imagens/placas3.jpg" style="width:300px;height:350px;float:left;" />
+                <label style="width: 320px; float: left; margin-left: 15px;">Fone</label>
+                <input id="Cad_Segundo_Fone" name="Cad_Segundo_Fone" type="text" placeholder="Fone" pattern="\([0-9]{2}\)[\s][0-9]{4}-[0-9]{4,5}" class="Cad_Usuario">
+                <label style="float: left; margin-left: 10px; margin-top: 15px;">*</label>
+                <img id="Cad_Segundo_Fone_ok" src="~/Imagens/OK.png" style="float:left; margin-left: 10px; margin-top: 10px;display:none" />
+                <div id="Cad_Segundo_Fone_erro" style="color: red; display: none; float: left; margin-left: 5px; margin-top: 15px;"></div>
+                <label style="width: 320px; float: left; margin-left: 15px;">Celular</label>
+                <input id="Cad_Segundo_Celular" name="cad_Celular" type="text" placeholder="Celular" pattern="\([0-9]{2}\)[\s][0-9]{4}-[0-9]{4,5}" class="Cad_Usuario"> 
+                <img id="Cad_Segundo_Celular_ok" src="~/Imagens/OK.png" style="float:left; margin-left: 10px; margin-top: 10px;display:none" /> 
+                <div id="Cad_Segundo_Celular_erro" style="color: red; display: none; float: left; margin-left: 5px; margin-top: 15px;"></div>         
+                <label style="width: 320px; float: left; margin-left: 15px;">Escolaridade</label>
+                <select id="Cad_Segundo_Escolaridade" style="height: 40px; width: 325px;" name="Cad_Segundo_Escolaridade" class="Cad_Usuario">
+                    <option value="1">Superior completo</option>
+                    <option value="2">Superior incompleto </option>
+                    <option value="3">Médio Completo</option>
+                    <option value="4">Médio incompleto</option>
+                    <option value="5">Fundamental completo</option>
+                    <option value="6">Fundamental incompleto</option>
+                </select>
+                <img id="Cad_Segundo_Escolaridade_ok" src="~/Imagens/OK.png" style="float:left; margin-left: 10px; margin-top: 10px;display:none" />  
+                <label style="width: 320px; float: left; margin-left: 15px;">Sexo</label>
+                <select id="Cad_Segundo_Sexo" style="height: 40px; width: 325px;" name="Cad_Segundo_Sexo" class="Cad_Usuario">
+                    <option value="M">Masculino</option>
+                    <option value="F">Feminino</option>
+                </select>
+                <img id="Cad_Segundo_Sexo_ok" src="~/Imagens/OK.png" style="float:left; margin-left: 10px; margin-top: 10px;display:none" />  
+                <label style="width: 320px; float: left; margin-left: 15px;">Data de Nascimento</label>
+                <input id="Cad_Segundo_DtNasc" name="Cad_Segundo_DtNasc" type="text" placeholder="Data de Nascimento" pattern=" \([0-9]{2}\)[\s][0-9]{4}-[0-9]{4,5}" class="Cad_Usuario">
+                <label style="float: left; margin-left: 10px; margin-top: 15px;">*</label>
+                <img id="Cad_Segundo_DtNasc_ok" src="~/Imagens/OK.png" style="float:left; margin-left: 10px; margin-top: 10px;display:none" />
+                <div id="Cad_Segundo_DtNasc_erro" style="color: red; display: none; float: left; margin-left: 5px; margin-top: 15px;"></div>
+                <div style="width: 300px; float: left;">
+                    <button id="Cad_2_Proximo" class="Cad_Proximo">Próximo</button>
+                </div>
+            </div>
+        </div>
+        <div id="tab-3" class="tab-content">
+            <div style="height:290px; width: 900px;">
+                <img src="~/Imagens/placas2.jpg" style="width: 300px; height: 280px; float: left;" />
+                <label style="width: 320px; float: left; margin-left: 15px;">CEP</label>
+                <input id="Cad_Terceiro_Cep" name="Cad_Terceiro_Cep" type="text" placeholder="CEP" pattern=" \([0-9]{2}\)[\s][0-9]{4}-[0-9]{4,5}" class="Cad_Usuario">
+                <label style="float: left; margin-left: 10px; margin-top: 15px;">*</label>
+                <img id="Cad_Terceiro_Cep_ok" src="~/Imagens/OK.png" style="float:left; margin-left: 10px; margin-top: 10px;display:none" />
+                <div id="Cad_Terceiro_Cep_erro" style="color: red; display: none; float: left; margin-left: 5px; margin-top: 15px;"></div>
+                <label style="width: 320px; float: left; margin-left: 15px;">Endereço</label>
+                <input id="Cad_Terceiro_Endereco" name="Cad_Terceiro_Endereco" type="text" placeholder="Endereço" class="Cad_Usuario">
+                <label style="float: left; margin-left: 10px; margin-top: 15px;">*</label>
+                <img id="Cad_Terceiro_Endereco_ok" src="~/Imagens/OK.png" style="float:left; margin-left: 10px; margin-top: 10px;display:none" />
+                <div id="Cad_Terceiro_Endereco_erro" style="color: red; display: none; float: left; margin-left: 5px; margin-top: 15px;"></div>
+                <label style="width: 320px; float: left; margin-left: 15px;">Estado</label>
+                <select id="Cad_Terceiro_Estado" style="height: 40px; width: 325px;" name="Cad_Terceiro_Estado" class="Cad_Usuario"></select>
+                <label style="float: left; margin-left: 10px; margin-top: 15px;">*</label>
+                <img id="Cad_Terceiro_Estado_ok" src="~/Imagens/OK.png" style="float:left; margin-left: 10px; margin-top: 10px;display:none" />
+                <div id="Cad_Terceiro_Estado_erro" style="color: red; display: none; float: left; margin-left: 5px; margin-top: 15px;"></div>
+                <label style="width: 320px; float: left; margin-left: 15px;">Cidade</label>
+                <select id="Cad_Terceiro_Cidade" style="height: 40px; width: 325px;" name="Cad_Terceiro_Cidade" class="Cad_Usuario">
+                    <option value='0'>--Selecione a Cidade--</option>
+                </select>
+                <label style="float: left; margin-left: 10px; margin-top: 15px;">*</label>
+                <img id="Cad_Terceiro_Cidade_ok" src="~/Imagens/OK.png" style="float:left; margin-left: 10px; margin-top: 10px;display:none" />
+                <div id="Cad_Terceiro_Cidade_erro" style="color: red; display: none; float: left; margin-left: 5px; margin-top: 15px;"></div>
+                <div style="width: 300px; float: left;">
+                    <button id="Cad_3_Proximo" class="Cad_Proximo">Próximo</button>
+                </div>
+            </div>
+        </div>
+        <div id="tab-4" class="tab-content">
+            <div style="height:180px; width: 900px;">
+                <img src="~/Imagens/places4.jpg" style="width: 300px; height: 170px; float: left;" />
+                <label style="width: 320px; float: left; margin-left: 15px;">Senha</label>
+                <input id="Cad_Quarto_Senha" name="Cad_Terceiro_Endereco" type="password" placeholder="Senha" class="Cad_Usuario">
+                <label style="float: left; margin-left: 10px; margin-top: 15px;">*</label>
+                <img id="Cad_Quarto_Senha_ok" src="~/Imagens/OK.png" style="float:left; margin-left: 10px; margin-top: 10px;display:none" />
+                <div id="Cad_Quarto_Senha_erro" style="color: red; display: none; float: left; margin-left: 5px; margin-top: 15px;"></div>
+                <label style="width: 320px; float: left; margin-left: 15px;">Confirmar Senha</label>
+                <input id="Cad_Quarto_Confirmar" name="Cad_Terceiro_Endereco" type="password" placeholder="Confirmar Senha" class="Cad_Usuario">
+                <label style="float: left; margin-left: 10px; margin-top: 15px;">*</label>
+                <img id="Cad_Quarto_Confirmar_ok" src="~/Imagens/OK.png" style="float:left; margin-left: 10px; margin-top: 10px;display:none" />
+                <div id="Cad_Quarto_Confirmar_erro" style="color: red; display: none; float: left; margin-left: 5px; margin-top: 15px;"></div>
+                <div style="width: 300px; float: left;">
+                    <button id="Cad_4_Proximo" class="Cad_Proximo">Próximo</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Popup itself -->
+    <div id="Login_painel" class="white-popup mfp-with-anim mfp-hide">
+        <a href="#" id="LoginFaceMobile"><img src="~/Imagens/Noticias/facebook_noticia.png" id="LoginFaceMobileImg" /> Entrar com o Facebook</a>
+        <img src="~/Imagens/Mundo.jpg" id="ImgMundo" />
+        <div id="MensagemLogin"></div>
+        <input type="email" id="inputEmail" class="form-control" placeholder="Endereço de Email" required autofocus name="Email" style="" />
+        <input type="password" id="inputPassword" class="form-control" placeholder="Senha" required name="password" style="">
+        <button id="BtnLogar" class="btn" type="submit" value="enviar">Acessar</button>
+        <a href="#" id="Recuperar">Recuperar Senha</a>
+        <a href="\Social\CadastroCelular" data-effect="mfp-zoom-out" id="CadastrarIntercambiarLogin">Cadastre-se</a>
+    </div>
+
+    <div id="CelularUsuario_painel" style="height:20%" class="white-popup mfp-with-anim mfp-hide">
+        <img src="~/Imagens/Carregando.gif" id="Perfil_Foto_Celular" />
+             <p id="PerfilNomeUsuario_Celular"></p>
+            <p id="PerfilAcoes_Celular"> <a href="/Social/Perfil"> Perfil </a> -<a href="#" id="LoginSair_Celular">Sair</a></p>
+    </div>
+
+    <section id="Top_tudo">
+
+        <header>
+
+            <div id="Top_Publicidade_1">
+
+
+                <!-- Intercambiar_top -->
+                <ins class="adsbygoogle"
+                     style="display:inline-block;width:728px;height:90px;margin-left:15%"
+                     data-ad-client="ca-pub-1533126140762745"
+                     data-ad-slot="9110748795"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+
+            </div>
+
+            <div id="Top_Menu_Resp">
+
+                <input type="checkbox" id="control-nav" class="Top_Check_Menu" />
+                <label for="control-nav" class="control-nav"></label>
+                <label for="control-nav" class="control-nav-close"></label>
+                <img src="~/Imagens/Carregando.gif" id="Login_Resp" width="31px" height="29px" />
+                              
+                <img src="~/Imagens/Carregando.gif" style="display:none" id="CelularUsuario" width="31px" height="29px" />
+              
+                    <nav class="fR">
+
+                        <ul>
+                            <li>@Html.ActionLink("Início", "Index", "Noticias", null, new { @class = "menu" })</li>
+                            <li>@Html.ActionLink("Sobre", "Sobre", "Noticias", null, new { @class = "menu" })</li>
+                            <li>@Html.ActionLink("Contato", "Contato", "Noticias", null, new { @class = "menu" })</li>
+                            @{
+
+                                var controller = ViewContext.Controller as Intercambiar_mvc_v1.Controllers.NoticiasController;
+
+
+                                if (controller != null)
+                                {
+                                    if (controller.VerificaAutor())
+                                    {
+                                        <li>@Html.ActionLink("Administrador", "Administrador", "Social", null, new { @class = "menu" })</li>;
+                                    }
+                                }
+                                else
+                                {
+                                    var controller2 = ViewContext.Controller as Intercambiar_mvc_v1.Controllers.SocialController;
+                                    if (controller2 != null)
+                                    {
+                                        if (controller2.VerificaAutor())
+                                        {
+                                            <li>@Html.ActionLink("Administrador", "Administrador", "Social", null, new { @class = "menu" })</li>;
+                                        }
+                                    }
+                                }
+                            }
+                        </ul>
+                    </nav>
+
+
+</div>
+
+            @*<div id="Top_Menu_Resp_cLICK">
+            <a href="#CelularUsuario_painel" data-effect="mfp-zoom-out" id="testeCadastrarIntercambiar" style="color: #FE0000;">
+                teste
+            </a>
+            </div>*@
+
+
+            <a href="http://www.intercambiar.com.br">
+                <img src="~/Imagens/Logo.jpg" id="Top_Logo" alt="" border="0" />
+            </a>
+
+
+            <ul id="Login">
+                <li id="FaceLoginImg"><img src="~/Imagens/Entre_Face.jpg" alt="" /></li>
+                <li id="FaceLoginTxt" class="Primeiro">Entrar com o Facebook</li>
+                <li><hr /></li>
+                <li class="Texto">
+                    <a href="#Login_painel" data-effect="mfp-zoom-out" id="LoginClick">Fazer Login</a>
+                </li>
+                <li id="inline-popups2"><hr /></li>
+                <li class="Castrar">
+                    <a href="#testeCadastrarIntercambiar" data-effect="mfp-zoom-out" id="CadastrarIntercambiar1" style="color:#FE0000">Cadastre-se</a>
+                </li>
+            </ul>
+
+            <p id="PerfilNomeUsuario"></p>
+            <p id="PerfilAcoes"> <a href="/Social/Perfil"> Perfil </a> - <a href="#" id="LoginSair">Sair</a></p>
+            <img src="" id="Perfil_Foto" />
+
+            <div id="Top_busca" class="Top_busca">
+                <!--<input type="text" name="fname" style="width: 320px; height: 30px; float: left; margin-top: 6px;">-->
+                @Html.TextBox("txtPesquisa", null, new { style = "width: 320px; height: 30px; float: left; margin-top: 6px;" })
+                <div id="target" style="cursor: pointer;">
+                    <img id="Top_Botao_Pesquisar" src="~/Imagens/Top_r7_c22.jpg" alt="" />
+                </div>
+            </div>
+
+
+            <div id="Top_Menu">
+
+                <ul>
+                    <li>@Html.ActionLink("Início", "Index", "Noticias", null, new { @class = "menu" })</li>
+                    <li>@Html.ActionLink("Sobre", "Sobre", "Noticias", null, new { @class = "menu" })</li>
+                    <li>@Html.ActionLink("Contato", "Contato", "Noticias", null, new { @class = "menu" })</li>
+                    @{ 
+                       
+       
+                        if (controller != null)
+                        {
+                            if (controller.VerificaAutor())
+                            { 
+                                <li>@Html.ActionLink("Administrador", "Administrador", "Social", null, new { @class = "menu" })</li>;
+                            }
+                        }
+                        else
+                        {
+                            var controller2 = ViewContext.Controller as Intercambiar_mvc_v1.Controllers.SocialController;
+                            if (controller2 != null)
+                            {
+                                if (controller2.VerificaAutor())
+                                {
+                                    <li>@Html.ActionLink("Administrador", "Administrador", "Social", null, new { @class = "menu" })</li>;
+                                }
+                            }
+                        }
+                    }
+                                                         
+                           
+                    
+
+                </ul>
+
+            </div>
+
+</header>
+
+        <main>
+            @RenderBody()
+        </main>
+
+        <footer>
+            <div id="Top_barra">
+                <hr>
+            </div>
+            <div id="Top_DesenvolvidoPor">Desenvolvido por <a href="https://br.linkedin.com/pub/tiago-pereira-da-silva/31/b85/70a" target="_blank"> Tiago Silva </a></div>
+            <div id="Top_CopiaDesseMaterial">A c&oacute;pia desse material para uso comercial &eacute; totalmente proibido</div>
+        </footer>
+
+    </section>
+
+</body>
+</html>

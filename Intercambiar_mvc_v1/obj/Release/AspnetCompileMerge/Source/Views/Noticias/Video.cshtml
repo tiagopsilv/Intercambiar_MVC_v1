@@ -1,0 +1,75 @@
+﻿@model Intercambiar_mvc_v1.Models.Video
+
+@{
+    ViewBag.Title = @Html.DisplayFor(model => model.Titulo);
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.description = String.Format("<meta name=\"description\" content=\"{0}\">", Html.DisplayFor(model => model.Titulo));
+}
+
+@section head{
+    <link href="~/Content/Video.css" rel="stylesheet" />
+}
+
+@section script{
+
+    <script type="text/javascript">
+
+    $(document).ready(function () {
+        $(document).on("click", "#FaceInter", function () {
+            FB.ui({
+                method: 'feed',
+                link: '@Request.Url.GetLeftPart(UriPartial.Path)',
+                redirect_uri: 'http://www.intercambiar.com.br',
+                caption: '@Html.DisplayFor(model => model.Titulo)',
+                name: 'Intercambiar'
+            }, function (response) { });
+        });
+    });
+
+    !function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https'; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = p + '://platform.twitter.com/widgets.js'; fjs.parentNode.insertBefore(js, fjs); } }(document, 'script', 'twitter-wjs');
+
+    </script>
+
+}
+
+
+
+
+<div id="Video">
+    <div id="Video_esquerda">
+
+        <h1>@Html.DisplayFor(model => model.Titulo)</h1>
+        <p class="author"><span>@Html.DisplayFor(model => model.Data)</span></p>
+        <ul>
+            <li class="title">Compartilhe:</li>
+            <li><a id="FaceInter" href="#"><img src="~/Imagens/Noticias/facebook_noticia.png" alt="Facebook Share Button" title="Facebook Share Button" class="Compartilhe" />Facebook</a></li>
+            <li>|</li>
+            <li><a href="http://twitter.com/intent/tweet?url=@Request.Url.GetLeftPart(UriPartial.Path)&text=@Html.DisplayFor(model => model.Titulo)&via=intercambiar&related=yarrcat" target="_blank"><img src="~/Imagens/Noticias/twitter_noticia.png" alt="" class="Compartilhe" />Twitter</a></li>
+            <li>|</li>
+            <li><a href="https://plus.google.com/share?url={@Request.Url.GetLeftPart(UriPartial.Path)}" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><img src="~/Imagens/Noticias/googleplus_noticia.png" alt="" class="Compartilhe" />Google+</a></li>
+        </ul>
+
+
+        <div id="Video_Video">
+            <iframe width="705" height="500"
+                    src="@Html.DisplayFor(model => model.URL)" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+
+    </div>
+    <div id="Video_direita">
+
+        <div id="Video_sidebars">
+
+            <ins class="adsbygoogle"
+                 style="display:inline-block;width:336px;height:280px"
+                 data-ad-client="ca-pub-1533126140762745"
+                 data-ad-slot="5180076795"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+
+        </div>
+
+
+    </div>

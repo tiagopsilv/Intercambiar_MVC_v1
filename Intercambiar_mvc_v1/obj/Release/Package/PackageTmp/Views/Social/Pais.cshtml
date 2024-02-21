@@ -1,0 +1,81 @@
+﻿@{
+    ViewBag.Title = "Pais";
+}
+
+@section head{
+    <link href="~/Content/Pais.css" rel="stylesheet" />
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+
+}
+
+
+<div id="Desk">
+
+    <p id="LinkVolta">@Html.ActionLink(" Mundo > América do Norte > ", "ListaPais", "Social", "1", new { @class = "linkGUIA" })</p>
+
+    <p class="Pais_Titulo">Estadus Unidos da América</p>
+
+    <img id="Cima_r2_c2" src="/Imagens/Destino/Capa_Pais/EUA.jpg" border="0" alt="" />
+
+    <p class="Paises_2_Cima_Capital">
+        <strong>Capital: Washington dc<br />Moeda: dólar norte-americano (USD)</strong><br />
+        Um dos destinos preferidos pelos estudante do brasileiros, os Estados Unidos é Considerado a capital do mundo, o país se destaca pelo qualidade de suas instituições de ensino e de sua indústria de entretenimento.
+    </p>
+
+</div>
+
+
+<div id="Display">
+    <p class="Pais_Titulo">Cidades</p>
+
+    <a href="#myCarousel" role="button" data-slide="prev" style="background:#00F"><div class="seta-esquerda"></div></a>
+
+
+    <br>
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <div id="Imagens">
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+
+                <div class="item active">
+                    <a href="@Url.Action("Cidade", "Social", "1")">
+                        <img src="/Imagens/Destino/Fotos_Cidades/NY.jpg" alt="Nova York" id="Foto">
+                        <h3 class="Paises_Nome_Cidade">Nova York</h3>
+                        <h2 class="Paises_Link_Cidade">Veja mais</h2>
+                    </a>
+                </div>
+
+                <div class="item">
+                    <a href="#">
+                        <img src="/Imagens/Destino/Fotos_Cidades/Boston.jpg" alt="Boston" id="Foto">
+                        <h3 class="Paises_Nome_Cidade">Boston</h3>
+                        <h2 class="Paises_Link_Cidade">Veja mais</h2>
+                    </a>
+                </div>
+
+                <div class="item">
+                    <a href="#">
+                        <img src="/Imagens/Destino/Fotos_Cidades/LA.jpg" alt="Los Angeles" id="Foto">
+                        <h3 class="Paises_Nome_Cidade">Los Angeles</h3>
+                        <h2 class="Paises_Link_Cidade">Veja mais</h2>
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+        <a style="background:#00F" href="#myCarousel" role="button" data-slide="next"><div class="seta-direita"></div></a>
+
+    </div>
+
+    <div id="seta-esquerda-mobile">
+        <a href="#myCarousel" role="button" data-slide="prev" style="font-size:50px;margin-top:0px;"><</a>
+    </div>
+    <div id="seta-direita-mobile">
+        <a href="#myCarousel" role="button" data-slide="next" style="font-size: 50px; margin-top: 0px;">></a>
+    </div>
+
+</div>
